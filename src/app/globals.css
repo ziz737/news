@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@600;700;800&display=swap');
+
+* { font-family: 'Tajawal', 'Cairo', sans-serif; }
+
+body {
+  background: #F8F9FA;
+  color: #0A1931;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+/* Gold shimmer */
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F1C453 50%, #C5A880 100%);
+}
+
+/* Card hover */
+.card-hover:hover img {
+  transform: scale(1.07);
+}
+
+/* Breaking pulse */
+@keyframes pulse-red {
+  0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(196,30,58,0.7); }
+  50% { opacity: 0.85; box-shadow: 0 0 0 8px rgba(196,30,58,0); }
+}
+.pulse-breaking { animation: pulse-red 1.8s infinite; }
